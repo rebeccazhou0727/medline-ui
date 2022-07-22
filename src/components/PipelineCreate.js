@@ -36,11 +36,6 @@ const PipelineCreate = () => {
         const response = await onRequest(url, {name, kind, base_model:baseModel, metadata}, {'X-Auth-Token':token});
 
         console.log(response);
-
-        console.log(name);
-        console.log(kind);
-        console.log(labels);
-        console.log(baseModel);
     }
 
     return (

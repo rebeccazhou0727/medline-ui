@@ -69,7 +69,8 @@ const ImageUploader = () => {
                                             {'X-Auth-Token':token}
                                         );
                                         
-                                        console.log(response);
+                                        // response is current null
+                                        console.log(response)
                                     }
                                 }}
                                 types={labels}
