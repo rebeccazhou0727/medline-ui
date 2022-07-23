@@ -18,8 +18,7 @@ const ImageUploader = () => {
 
     const location = useLocation();
     const pipelineId = location.state.id;
-    const metadata = location.state.metadata;
-    const labels = metadata ? JSON.parse(atob(metadata)) : [];
+    const labels = location.state.labels ?? [];
 
     return (
         <ImageUploading

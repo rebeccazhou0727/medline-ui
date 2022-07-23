@@ -31,9 +31,7 @@ const PipelineCreate = () => {
         const url = 'https://fydp-coordinator.fly.dev/services.pipeline.v1.PipelineService/CreatePipeline';
         const token = JSON.parse(window.localStorage.getItem("token")).token.id;
 
-        const metadata = btoa(JSON.stringify(labels));
-
-        const response = await onRequest(url, {name, kind, base_model:baseModel, metadata}, {'X-Auth-Token':token});
+        const response = await onRequest(url, {name, kind, base_model:baseModel, metadata:{classification:{class_names:labels}}}, {'X-Auth-Token':token});
 
         console.log(response);
     }
